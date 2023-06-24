@@ -1,7 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 
-import Script from "next/script";
+import FontAwesomeScript from "./scripts/FontAwesomeScript";
+import GAScript from "./scripts/GAScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script src="https://kit.fontawesome.com/32b3d98784.js"></Script>
+      <FontAwesomeScript />
+      <GAScript />
       <body className={inter.className}>{children}</body>
     </html>
   );
