@@ -1,0 +1,24 @@
+{
+  "navigation": [
+    {
+      "title": "About",
+      "anchor": "#About"
+    }
+  ],
+  "hero": {
+    "name": "MIN HAO LIN",
+    "subtitle": "I'm the Frontend Developer."
+  },
+  "about": {
+    "title": "About me",
+    "image": "/min-hao-lin.jpg",
+    "primary": "A frontend developer with 4 years of experience. Skilled in using Typescript, JavaScript, React.js and Next.js.",
+    "secondary": "- Web Frontend Developer at Dcard (2020.7 - now)\n- Web Frontend Developer at Kuobrothers (2020.3 - 2021.5)\n- Front End Developer Intern at Seekrtech (2019.1 - 2019.3)\n- Full Stack Developer Intern at YOCTOL.AI (2018.7 - 2018.8)\n- Full Stack Developer Intern at Titansoft (2017.7 - 2017.8)\n - Computer Science, National Tsing Hua University (2015.9 - 2019.6)",
+    "resume": "https://www.linkedin.com/in/min-hao-lin"
+  },
+  "footer": {
+    "email": "mailto:terry92516@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/min-hao-lin",
+    "github": "https://github.com/terry623"
+  }
+}
