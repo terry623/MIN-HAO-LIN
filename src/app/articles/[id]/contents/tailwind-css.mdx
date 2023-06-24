@@ -1,0 +1,29 @@
+# Tailwind CSS 是什麼，到底好不好用？
+
+Tailwind CSS 是一個工具型框架，適合拿來快速開發「客製化」 UI。在一些知名的 CSS 框架，如 Bootstrap，除了基本的 UI 元件，也會有個 Utility 篇，提供一些寫好的 ClassName 讓你直接使用，不管是調整 Position, Size, Color 等。Tailwind CSS 就是此篇章的「終極完全版」，只用這些工具就可以開發出一個很完善、滿足各種場景的 UI。
+
+初次使用
+tailwindcss 官方文件範例今天想要刻一個可愛的聊天框。用傳統 CSS 的寫法，要先幫每個 ClassName 命名，而命名又是個大學問，比較主流會用 BEM（Block, Element, Modifier）的設計模式。而命名好後，就是在 CSS 檔案裡為每個 ClassName 寫好相對應的屬性，如下。
+
+tailwindcss 官方文件範例而這也衍生了一些問題，例如：
+命名過於麻煩且枯燥
+CSS 檔案大小隨著專案規模日益增加，久了就影響網站效能
+會有互相 Override 的問題，ClassName 負責到同部分而衝突
+必須在 HTML 和 CSS 間切換才知道元件長什麼樣子
+
+而若使用 Tailwind CSS，就會如下。
+
+tailwindcss 官方文件範例這種又可以被稱作為 Functional CSS 的寫法，用很多已經定義好的 Utility 拼裝出你要的元件樣式。好處是：
+再也不用煩惱 ClassName 如何命名
+重複用同樣的 CSS，不會隨著專案規模而 CSS 檔案越變越大
+顆粒小，Utility 都只負責一個部分，容易自行組合客製化
+從 HTML 就可以知道 CSS 的樣式
+
+優點與缺點
+除了上述優點，還有可以訂定設計的規範，方便建立 Design System。像開發時可能會用 p-1、m-1 等處理 padding, margin，使用 Tailwind CSS 能快速用 Config 管理每個單位是多少，這樣工程端就可以有固定的比例規範去刻元件（設計端也要有相同規範），其他的也可以訂定 Color 使用主題色，Typography 使用固定字體大小，這些都能避免團隊成員隨心所欲地下 CSS 屬性。當然這以前也做得到，就是自訂每個 CSS 的變數，但就會比較麻煩，現在只要寫個設定檔就都幫你用好了。
+而缺點的話，是會讓每個 Element 看起來很長，第一時間沒辦法知道這個元件到底是做什麼用的（雖然知道長什麼樣）。但這就是一個取捨。另外今天若有兩個 Button，它們都長得一樣，豈不就兩個 Element 都要寫相同一長串的 CSS？建議是說應該要先把這相同的部分抽出變成可重用的 Template ，或變成同個 Component，用 HTML 或 JS 的角度而非 CSS。但官方也提供了 @apply 這個功能，寫原本自創的 ClassName，但 CSS 屬性可以使用 Tailwind CSS 提供的 Utility，算是一個折衷方法，如下。
+
+tailwindcss 官方文件範例
+
+總結來說
+今天可以視一個專案的需求，若今天沒有特別的設計需求，只用現成的 UI 那可以使用 CSS 框架，如最一開始提到的 Bootstrap，或 Ant Design, Material UI 都蠻推薦的。但若要客製化 UI，使用別人寫好的 UI 還需要花很多時間去覆蓋樣式，這樣算起來開發時間不划算。那像 Tailwind CSS 這種 Utility-First 的框架就很適合。下次開始一個新專案時，不如來試試這套 CSS 新工具吧！或許會有不同的感受。

@@ -1,0 +1,63 @@
+# 究竟如何組織 React 專案架構？
+
+在剛開始寫前端專案的時候，都會遇到一個問題：
+
+「我到底要把檔案放在哪裡勒，種類那麼多好難分歐」
+
+這時候無助的你該怎麼辦呢？不妨先從頭思考一下……
+
+基本架構
+若你使用 create-react-app 工具創建專案，就會長得像這樣：
+
+「把所有檔案都放在 src 太舒服了！真簡單~」
+
+小專案可能差異不大，但規模一變大或開發的人變多，沒有好的資料夾架構，很容易就在廣大的檔案海中迷失方向，要找某某功能都會找半天。而最基本的第一步，就是把功能類似的檔案放在一起。例如：
+
+components：視覺元件
+containers：元件容器
+assets：靜態資源
+services：服務類
+helpers：工具類
+config：設定檔
+大家都知道 React 是 Component Based，在拆分元件的過程，很流行的方式是把一個個元件拆成資料夾（可稱為 Folder Based？），然後每個資料夾下就是主要的 index.js 和其他如 styles.css、test.js。
+
+在使用時就可以用
+
+```
+import Footer from ‘../components/Footer
+
+import Header from ‘../components/Header
+```
+
+也有人不用 index.js 而用元件名稱，不過使用就會變成
+
+```
+import Footer from ‘../components/Footer/Footer
+
+import Header from ‘../components/Header/Header
+```
+
+我自己覺得看起來會有點冗長且重複，相比單純用 index.js
+
+這樣分資料夾的好處是你今天發現哪個元件有問題，不管是樣式或測試，就是去每個元件的資料夾底下找，把元件的責任切得乾乾淨淨。
+
+實戰經驗
+而我們團隊是使用 Next.js 創建專案，做的是電商功能型網站。在組織專案架構中，把視覺元件放在名為 view 的資料夾。其中再細分：
+
+desktop
+mobile
+shared
+「咦為什麼兩個平台還要分開寫？連 RWD 都沒聽過嗎？」原因是設計稿上兩個裝置實在差異過大，做 RWD 反而是在增加複雜度跟開發時間，而功能面上也有不小差異。由於 App 產品佔蠻大部分營收來源，所以不管設計或功能推行，有限開發時間下都以手機端的使用者優先，電腦版的功能進度就相對落後。
+
+經過大家討論，我們創了 Providers 資料夾，主要商業邏輯都會寫在這。因為不管在 desktop 或 mobile，商業邏輯是可以共用的，例如打什麼 API，資料該如何處理，主要狀態如何改變。讓 view 裡面不會 desktop 寫一套邏輯，mobile 又給它寫一套。完成了處理邏輯的變數或函式，會使用 React Context API 跨元件去傳遞資料（可說是簡化版的 Redux），底下的子元件一樣使用 React Context API （Consumer / useContext）取得 Provider 裡存的東西。示意如下圖：
+
+總結
+我覺得架構本身不管怎麼設計都沒什麼對錯，只要跟開發團隊、參與到此專案的人討論好，大家對於架構都有共識就足夠，這才是加速開發和合作的秘訣（？）
+
+React 官方文件也這樣說：
+
+If you’re just starting a project, don’t spend more than five minutes on choosing a file structure. Pick any of the above approaches (or come up with your own) and start writing code! You’ll likely want to rethink it anyway after you’ve written some real code.
+
+一開始別花太多時間想專案結構，因為在寫的過程可能會一直重新思考，程式碼也會大到你想將某些檔案開始做分類，那時就有足夠的認知去分辨說到底哪些檔案該放哪裡，改怎麼重新組織你的 React 專案架構。
+
+所以與其看這篇文章，不如趕快動動你的小手吧！

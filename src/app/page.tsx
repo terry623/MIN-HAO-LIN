@@ -1,15 +1,5 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Footer from "./components/Footer";
+import Main from "./main";
 
 export default function Home() {
-  return (
-    <main className="text-black">
-      <Header />
-      <Hero />
-      <About />
-      <Footer />
-    </main>
-  );
+  return <Main />;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { links } from "../constants";
+import { links } from "../../main/constants";
 
 const Footer = () => (
   <div className="footer px-8 py-16 flex justify-center align-center flex-col bg-neutral-800">
