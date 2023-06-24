@@ -3,6 +3,8 @@ import config from "../index.json";
 import Image from "next/image";
 import Link from "next/link";
 
+import Avatar from "../images/avatar.jpg";
+
 const About = () => {
   const about = config.about;
 
@@ -17,8 +19,8 @@ const About = () => {
       <div className="mt-16 flex flex-col md:flex-row align-center items-center">
         <div className="w-1/2 flex justify-center content-center">
           <Image
-            src={about.image}
-            alt="about"
+            src={Avatar}
+            alt="avatar"
             className="shadow-lg"
             width={300}
             height={300}
