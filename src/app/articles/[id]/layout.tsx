@@ -3,5 +3,5 @@ export default function ArticlesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className="px-8 lg:px-32 pb-8">{children}</section>;
+  return <section className="px-8 md:px-32 pb-8">{children}</section>;
 }

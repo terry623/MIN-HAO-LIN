@@ -2,14 +2,14 @@ import React from "react";
 
 const Home = () => (
   <section className="h-screen bg-white overflow-x-hidden">
-    <div className="px-8 lg:px-32 flex flex-col justify-center align-between">
-      <h1 className="text-6xl mt-48 font-bold">
+    <div className="px-8 md:px-32 flex flex-col justify-center align-between">
+      <h1 className="text-4xl mt-32 md:mt-48 md:text-6xl font-bold">
         Hi, my name is
         <span className="ml-3 whitespace-nowrap bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
           MIN HAO LIN
         </span>
       </h1>
-      <h1 className="text-6xl font-bold mt-4">
+      <h1 className="text-4xl md:text-6xl font-bold mt-4">
         I&apos;m the Frontend Developer.
       </h1>
       <a

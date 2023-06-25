@@ -3,7 +3,7 @@ import Link from "next/link";
 import { links } from "../../main/constants";
 
 const Footer = () => (
-  <div className="footer px-8 py-16 flex justify-center align-center flex-col bg-neutral-800">
+  <div className="px-8 py-16 flex justify-center align-center flex-col bg-neutral-800">
     <div
       className="mx-auto text-3xl text-neutral-400 space-x-10"
       style={{ color: "#a3a3a3" }}

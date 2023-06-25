@@ -24,14 +24,14 @@ const About = () => (
         />
       </div>
       <div className="pt-8 md:py-0 md:w-1/2 text-white md:ml-4 text-center md:text-left whitespace-pre-line">
-        <div className="about__primary">
+        <div>
           <span>
             A frontend developer with 4 years of experience. Skilled in using
             Typescript, JavaScript, React.js and Next.js.
           </span>
         </div>
         <div className="mt-6">
-          <ul className="list-disc list-inside">
+          <ul className="md:list-disc list-outside md:list-indside">
             <li>Web Frontend Developer at Dcard (2020.7 - now)</li>
             <li>Web Frontend Developer at Kuobrothers (2020.3 - 2021.5)</li>
             <li>Front End Developer Intern at Seekrtech (2019.1 - 2019.3)</li>
@@ -41,10 +41,7 @@ const About = () => (
           </ul>
         </div>
         <div className="mt-6 mx-auto md:mx-0 border-2 border-white py-1 px-2 w-36 text-center font-bold">
-          <Link
-            href={links.linkedin}
-            className="about__resume text-white text-l"
-          >
+          <Link href={links.linkedin} className="text-white text-l">
             View Resume
           </Link>
         </div>

@@ -12,7 +12,7 @@ const Articles = () => (
       <ul className="list-inside list-decimal">
         {Object.keys(contentMap).map((key) => (
           <Link href={`/articles/${key}`} key={key}>
-            <li className="m-4 p-2 hover:bg-gray-100">
+            <li className="m-4 p-1 hover:bg-gray-100">
               {contentMap[key].title}（{contentMap[key].date}）
             </li>
           </Link>
