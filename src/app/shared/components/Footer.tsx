@@ -14,7 +14,7 @@ const Footer = () => (
       <Link href={links.github} rel="noopener noreferrer" target="_blank">
         <i className="fa-brands fa-github" />
       </Link>
-      <Link href={links.github} rel="noopener noreferrer" target="_blank">
+      <Link href={links.medium} rel="noopener noreferrer" target="_blank">
         <i className="fa-brands fa-medium" />
       </Link>
       <Link href={links.email} rel="noopener noreferrer" target="_blank">
