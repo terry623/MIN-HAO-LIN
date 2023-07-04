@@ -31,9 +31,9 @@ const About = () => (
           </span>
         </div>
         <div className="mt-6">
-          <ul className="md:list-disc list-outside md:list-indside">
+          <ul className="md:list-disc list-inside">
             <li>Web Frontend Developer at Dcard (2020.7 - now)</li>
-            <li>Web Frontend Developer at Kuobrothers (2020.3 - 2021.5)</li>
+            <li>Full Stack Developer at Kuobrothers (2020.3 - 2021.5)</li>
             <li>Front End Developer Intern at Seekrtech (2019.1 - 2019.3)</li>
             <li>Full Stack Developer Intern at YOCTOL.AI (2018.7 - 2018.8)</li>
             <li>Full Stack Developer Intern at Titansoft (2017.7 - 2017.8)</li>

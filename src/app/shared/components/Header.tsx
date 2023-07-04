@@ -5,10 +5,6 @@ const navigations = [
     title: "About",
     link: "/#About",
   },
-  {
-    title: "Articles",
-    link: "/#Articles",
-  },
 ];
 
 const Header = () => (
