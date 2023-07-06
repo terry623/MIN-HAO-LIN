@@ -17,9 +17,6 @@ const Footer = () => (
       <Link href={links.medium} rel="noopener noreferrer" target="_blank">
         <i className="fa-brands fa-medium" />
       </Link>
-      <Link href={links.email} rel="noopener noreferrer" target="_blank">
-        <i className="fa-solid fa-envelope" />
-      </Link>
     </div>
   </div>
 );
