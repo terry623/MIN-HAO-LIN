@@ -32,7 +32,7 @@ const About = () => (
         </div>
         <div className="mt-6">
           <ul className="md:list-disc list-inside">
-            <li>Senior Frontend Developer at Dcard (2023.11 - now)</li>
+            <li>Senior Frontend Developer at Dcard (2023.11 - 2024.6)</li>
             <li>Frontend Developer at Dcard (2021.6 - 2023.10)</li>
             <li>Full Stack Developer at Kuobrothers (2020.3 - 2021.5)</li>
             <li>Front End Developer Intern at Seekrtech (2019.1 - 2019.3)</li>
